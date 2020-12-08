@@ -11,5 +11,5 @@ The project can give an overall picture of the US bikeshare data as well as a de
 The datas are "chicago.csv", "new_york_city.csv", and "washington.csv"
 
 ### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
+Udacity!
 
