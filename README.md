@@ -1,5 +1,5 @@
 ### Date created
-The datas are "chicago.csv", "new_york_city.csv", and "washington.csv"
+Dates created: 2020/12/07
 
 ### Project Title
 US Bikeshare Data Analysis
@@ -8,7 +8,7 @@ US Bikeshare Data Analysis
 The project can give an overall picture of the US bikeshare data as well as a detailed analysis of specific location/date data
 
 ### Files used
-Include the files used
+The datas are "chicago.csv", "new_york_city.csv", and "washington.csv"
 
 ### Credits
 It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
