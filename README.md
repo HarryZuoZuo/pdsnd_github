@@ -5,7 +5,7 @@ The datas are "chicago.csv", "new_york_city.csv", and "washington.csv"
 US Bikeshare Data Analysis
 
 ### Description
-Describe what your project is about and what it does
+The project can give an overall picture of the US bikeshare data as well as a detailed analysis of specific location/date data
 
 ### Files used
 Include the files used
