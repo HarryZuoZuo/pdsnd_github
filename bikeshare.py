@@ -15,7 +15,7 @@ CITIES_DATA = ['chicago', 'new york', 'washington']
 def get_filters():
     """
     Asks user to specify a city, month, and day to analyze.
-
+    Can be all or specific
     Returns:
         (str) city - name of the city to analyze
         (str) month - name of the month to filter by, or "all" to apply no month filter
@@ -80,7 +80,7 @@ def load_data(city, month, day):
         # use the index of the months list to get the corresponding int
         months = ['january', 'february', 'march', 'april', 'may', 'june']
         month = months.index(month) + 1
-    
+
         # filter by month to create the new dataframe
         df = df[df["month"] == month]
 
@@ -107,12 +107,12 @@ def time_stats(df):
 
     common_day_of_week = df["day_of_week"].mode()[0]
     print("The most frequent day of week of travel is: {}.".format(common_day_of_week))
-    
+
     # TO DO: display the most common start hour
 
     common_start_hour = df["start_time"].mode()[0]
     print("The most frequent start hour of travel is: {}.".format(str(common_start_hour)))
-    
+
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
 
@@ -166,20 +166,20 @@ def user_stats(df,city):
     # TO DO: Display counts of user types
     count_user_types = df["User Type"].value_counts()
     print("The counts of user types is: {}.".format(str(count_user_types)))
-    
-    if city == 'chicago.csv' or city == 'new_york_city.csv':    
+
+    if city == 'chicago.csv' or city == 'new_york_city.csv':
     # TO DO: Display counts of gender
         count_gender = df["Gender"].value_counts()
         print("The counts of gender is: {}.".format(str(count_gender)))
 
         # TO DO: Display earliest, most recent, and most common year of birth
         earliest_birth = df["Birth Year"].min()
-        print("The Earliest birth is: {}.".format(earliest_birth))        
+        print("The Earliest birth is: {}.".format(earliest_birth))
         most_recent_birth = df["Birth Year"].max()
-        print("The most recent birth is: {}.".format(most_recent_birth))       
+        print("The most recent birth is: {}.".format(most_recent_birth))
         most_common_birth = df["Birth Year"].mode()[0]
-        print("The most common birth year is: {}.".format(most_common_birth)) 
-    
+        print("The most common birth year is: {}.".format(most_common_birth))
+
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
 
@@ -187,12 +187,12 @@ def display_data(df):
     start_counter = 0
     end_counter = 5
     data_size = len(df.index)
-    
+
     while start_counter < data_size:
         raw_data = input("\nWould you like to see 5 lines of data?\n")
         if raw_data.lower() == "yes":
             print("\nDisplaying 5 rows of data.\n")
-            
+
             if end_counter > data_size:
                 end_counter = data_size
             print(df.iloc[start_counter:end_counter])
@@ -200,8 +200,8 @@ def display_data(df):
             end_counter += 5
         else:
             break
-  
-    
+
+
 def main():
     while True:
         city, month, day = get_filters()
